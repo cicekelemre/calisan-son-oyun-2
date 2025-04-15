@@ -1,0 +1,53 @@
+{
+    "anagrams": [
+      {
+        "word": "istanbul",
+        "hint": "Türkiye'nin en kalabalık şehri"
+      },
+      {
+        "word": "ankara",
+        "hint": "Türkiye'nin başkenti"
+      },
+      {
+        "word": "izmir",
+        "hint": "Ege'nin incisi"
+      },
+      {
+        "word": "tokyo",
+        "hint": "Japonya'nın başkenti"
+      },
+      {
+        "word": "paris",
+        "hint": "Fransa'nın başkenti"
+      },
+      {
+        "word": "london",
+        "hint": "İngiltere'nin başkenti"
+      },
+      {
+        "word": "berlin",
+        "hint": "Almanya'nın başkenti"
+      },
+      {
+        "word": "madrid",
+        "hint": "İspanya'nın başkenti"
+      },
+      {
+        "word": "roma",
+        "hint": "İtalya'nın başkenti"
+      },
+      {
+        "word": "moscow",
+        "hint": "Rusya'nın başkenti"
+      },
+      {
+        "word": "newyork",
+        "hint": "ABD'nin en kalabalık şehri"
+      },
+      {
+        "word": "pekin",
+        "hint": "Çin'in başkenti"
+      }
+    ]
+    }
+   

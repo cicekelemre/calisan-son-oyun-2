@@ -1,0 +1,46 @@
+{
+    "section1": {
+        "files": [
+            {
+                "url": "assets/images/theme3/background.webp",
+                "type": "image",
+                "key": "background"
+            },
+            {
+                "url": "assets/images/theme3/correct.png",
+                "type": "image",
+                "key": "correct"
+            },
+            {
+                "url": "assets/images/theme3/incorrect.png",
+                "type": "image",
+                "key": "incorrect"
+            },
+            {
+                "url": "assets/images/theme3/letter-box-1.png",
+                "type": "image",
+                "key": "letterBox1"
+            },
+            {
+                "url": "assets/images/theme3/letter-box-2.png",
+                "type": "image",
+                "key": "letterBox2"
+            },
+            {
+                "url": "assets/images/theme3/letter-box-3.png",
+                "type": "image",
+                "key": "letterBox3"
+            },
+            {
+                "url": "assets/images/theme3/targetarea.png",
+                "type": "image",
+                "key": "targetArea"
+            },
+            {
+                "url": "assets/images/theme3/targetarea-big.png",
+                "type": "image",
+                "key": "targetAreaBig"
+            }
+        ]
+    }
+}

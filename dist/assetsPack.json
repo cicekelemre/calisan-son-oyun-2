@@ -1,0 +1,126 @@
+{
+    "section1": {
+        "files": [
+            {
+                "url": "assets/images/start.png",
+                "type": "image",
+                "key": "start"
+            },
+
+            {
+                "url": "assets/images/answer-box.png",
+                "type": "image", 
+                "key": "answerBox"
+            },
+
+            {
+                "url": "assets/images/fullscreen-white.png",
+                "type": "image", 
+                "key": "fullscreen-white"
+            },
+
+            {
+                "url": "assets/images/fullscreen-black.png",
+                "type": "image", 
+                "key": "fullscreen-black"
+            },
+
+            {
+                "url": "assets/images/sound-enabled.webp",
+                "type": "image", 
+                "key": "sound-enabled"
+            },
+
+            {
+                "url": "assets/images/sound-disabled.webp",
+                "type": "image", 
+                "key": "sound-disabled"
+            },
+
+            {
+                "url": "assets/images/layout-switch-black.svg",
+                "type": "image", 
+                "key": "layout-switch-black"
+            },
+
+            {
+                "url": "assets/images/layout-switch-white.png",
+                "type": "image", 
+                "key": "layout-switch-white"
+            },
+
+            {
+                "url": "assets/images/playagain.png",
+                "type": "image", 
+                "key": "playagain"
+            },
+
+
+            {
+                "url": "assets/images/answers-container.png",
+                "type": "image", 
+                "key": "answersContainer"
+            },
+
+            {
+                "url": "assets/images/next-white.png",
+                "type": "image", 
+                "key": "next-white"
+            },
+            {
+                "url": "assets/images/next-black.png",
+                "type": "image", 
+                "key": "next-black"
+            },
+
+            {
+                "url": "assets/images/checkmark.png",
+                "type": "image", 
+                "key": "checkmark"
+            },
+
+            {
+                "url": "assets/images/submit-answer.png",
+                "type": "image", 
+                "key": "submitButton"
+            },
+
+            {
+                "url": "assets/sounds/background.mp3",
+                "type": "audio", 
+                "key": "backgroundMusic"
+            },
+            {
+                "url": "assets/sounds/click.mp3",
+                "type": "audio", 
+                "key": "clickSound"
+            },
+            {
+                "url": "assets/sounds/drop.mp3",
+                "type": "audio", 
+                "key": "dropSound"
+            },
+            {
+                "url": "assets/sounds/fail.mp3",
+                "type": "audio", 
+                "key": "failSound"
+            },
+            {
+                "url": "assets/sounds/game-restart.mp3",
+                "type": "audio", 
+                "key": "gameRestartSound"
+            },
+            {
+                "url": "assets/sounds/pickup.mp3",
+                "type": "audio", 
+                "key": "pickupSound"
+            },
+            {
+                "url": "assets/sounds/success.mp3",
+                "type": "audio", 
+                "key": "successSound"
+            }
+
+        ]
+    }
+}

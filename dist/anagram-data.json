@@ -1,0 +1,84 @@
+{
+  "list": [
+    {
+      "id": "1",
+      "type": "anagram",
+      "scrambledWord": "LMEPA",
+      "correctWord": "APPLE",
+      "hint": "A fruit that keeps the doctor away",
+      "difficulty": "easy"
+    },
+    {
+      "id": "2",
+      "type": "anagram",
+      "scrambledWord": "NBAANA",
+      "correctWord": "BANANA",
+      "hint": "Yellow curved fruit",
+      "difficulty": "easy"
+    },
+    {
+      "id": "3",
+      "type": "anagram",
+      "scrambledWord": "PTUERCMO",
+      "correctWord": "COMPUTER",
+      "hint": "Electronic device for processing data",
+      "difficulty": "medium"
+    },
+    {
+      "id": "4",
+      "type": "anagram",
+      "scrambledWord": "RPAMRGOM",
+      "correctWord": "PROGRAM",
+      "hint": "A set of instructions for a computer",
+      "difficulty": "medium"
+    },
+    {
+      "id": "5",
+      "type": "anagram",
+      "scrambledWord": "TREAWD",
+      "correctWord": "WATER",
+      "hint": "Essential liquid for life",
+      "difficulty": "easy"
+    },
+    {
+      "id": "6",
+      "type": "anagram",
+      "scrambledWord": "HPASRE",
+      "correctWord": "PHASER",
+      "hint": "The game framework we're using",
+      "difficulty": "medium"
+    },
+    {
+      "id": "7",
+      "type": "anagram",
+      "scrambledWord": "GAMRAAN",
+      "correctWord": "ANAGRAM",
+      "hint": "A word formed by rearranging the letters",
+      "difficulty": "medium"
+    },
+    {
+      "id": "8",
+      "type": "anagram",
+      "scrambledWord": "AVACJPRTSI",
+      "correctWord": "JAVASCRIPT",
+      "hint": "Popular programming language for web",
+      "difficulty": "hard"
+    },
+    {
+      "id": "9",
+      "type": "anagram",
+      "scrambledWord": "EOCNEFRNEC",
+      "correctWord": "CONFERENCE",
+      "hint": "A formal meeting for discussion",
+      "difficulty": "hard"
+    },
+    {
+      "id": "10",
+      "type": "anagram",
+      "scrambledWord": "EPLZZU",
+      "correctWord": "PUZZLE",
+      "hint": "A game that tests your ingenuity",
+      "difficulty": "easy"
+    }
+  ]
+} 
