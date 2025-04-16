@@ -7,28 +7,19 @@ export class FinishDialog extends Phaser.GameObjects.DOMElement{
     private _statusTitleElement!: HTMLElement | null;
 
     private _playAgainCallback: () => void;
-    private _answersValue: string;
-    private _countAnswersValue: number;
-    private _timeValue: string;
     
-
-    constructor(scene: Phaser.Scene, answers: string, countAnswers: number, time: number, playAgainCallBack: () => void){
+    // Constructor for wheel of fortune game
+    constructor(scene: Phaser.Scene, playAgainCallBack: () => void) {
         super(scene, 0, 0);
         scene.add.existing(this);
-        this._answersValue = answers;
-        this._countAnswersValue = countAnswers;
-
-        this._timeValue = this._formatTime(time);
+        
         this._playAgainCallback = playAgainCallBack;
 
         this.createFromCache('finishDialog');
         this._initElements();
-        this._setData();
+        this._setupForWheelOfFortune();
         this._addEvent();
     }
-
-
-
 
     private _initElements(): void{
         this._playAgainButton = this.node.querySelector('button');
@@ -37,24 +28,26 @@ export class FinishDialog extends Phaser.GameObjects.DOMElement{
         this._statusTitleElement = this.node.querySelector('#statusTitle');
     }
 
-    private _formatTime(seconds: number){
-        // Minutes
-        const minutes = Math.floor(seconds/60);
-        // Seconds
-        let partInSeconds = (seconds % 60).toString();
-        // Adds left zeros to seconds
-        partInSeconds = partInSeconds.toString().padStart(2,'0');
-        // Returns formated time
-        return `${minutes}:${partInSeconds}`;
-    }
-
-    private _setData(): void{
-        if(this._timeElement)this._timeElement.innerHTML = this._timeValue;
-        if(this._answersElement)this._answersElement.innerHTML = `${this._answersValue} / ${this._countAnswersValue}`;
-        if(this._statusTitleElement && Configs.timer.isCountDown)this._statusTitleElement.innerHTML = "TIME'S UP"; 
+    private _setupForWheelOfFortune(): void {
+        // Update the dialog UI for wheel of fortune
+        if (this._statusTitleElement) {
+            this._statusTitleElement.innerHTML = "Game Over";
+        }
+        
+        // Hide time and correct answers sections or modify as needed
+        if (this._timeElement?.parentElement) {
+            this._timeElement.parentElement.style.display = 'none';
+        }
+        
+        if (this._answersElement?.parentElement) {
+            this._answersElement.parentElement.style.display = 'none';
+        }
     }
 
     private _addEvent(): void{
-        this._playAgainButton?.addEventListener('click', () => {this._playAgainCallback()});
+        this._playAgainButton?.addEventListener('click', () => {
+            this._playAgainCallback();
+            this.destroy();
+        });
     }
 }

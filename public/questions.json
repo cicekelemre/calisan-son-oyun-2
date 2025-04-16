@@ -1,53 +1,77 @@
 {
-    "anagrams": [
+  "wheel": {
+    "wedges": [
       {
-        "word": "istanbul",
-        "hint": "Türkiye'nin en kalabalık şehri"
+        "content": "Şınıfta ne var, ne yok, kim var, kim yok?",
+        "color": "#1e88e5",
+        "textColor": "#ffffff"
       },
       {
-        "word": "ankara",
-        "hint": "Türkiye'nin başkenti"
+        "content": "Kendini tanıtın.",
+        "color": "#d32f2f",
+        "textColor": "#ffffff"
       },
       {
-        "word": "izmir",
-        "hint": "Ege'nin incisi"
+        "content": "Kahvaltıda ne var? Ne yiyorsunuz?",
+        "color": "#e65100",
+        "textColor": "#ffffff"
       },
       {
-        "word": "tokyo",
-        "hint": "Japonya'nın başkenti"
+        "content": "Ailenizi tanıtın.",
+        "color": "#4caf50",
+        "textColor": "#ffffff"
       },
       {
-        "word": "paris",
-        "hint": "Fransa'nın başkenti"
+        "content": "Etkinizi tanıtın.",
+        "color": "#9c27b0",
+        "textColor": "#ffffff"
       },
       {
-        "word": "london",
-        "hint": "İngiltere'nin başkenti"
+        "content": "Rutininizi anlatın.",
+        "color": "#303f9f",
+        "textColor": "#ffffff"
       },
       {
-        "word": "berlin",
-        "hint": "Almanya'nın başkenti"
+        "content": "Haftada ne var, ne yok, kim var, kim yok?",
+        "color": "#00796b",
+        "textColor": "#ffffff"
       },
       {
-        "word": "madrid",
-        "hint": "İspanya'nın başkenti"
+        "content": "Okula gidiyor musunuz?",
+        "color": "#c62828",
+        "textColor": "#ffffff"
       },
       {
-        "word": "roma",
-        "hint": "İtalya'nın başkenti"
+        "content": "Markettten meyve alıyor musunuz?",
+        "color": "#673ab7",
+        "textColor": "#ffffff"
       },
       {
-        "word": "moscow",
-        "hint": "Rusya'nın başkenti"
+        "content": "Dans ediyor musunuz?",
+        "color": "#0288d1",
+        "textColor": "#ffffff"
       },
       {
-        "word": "newyork",
-        "hint": "ABD'nin en kalabalık şehri"
+        "content": "Gitar çalıyor musunuz?",
+        "color": "#c2185b",
+        "textColor": "#ffffff"
       },
       {
-        "word": "pekin",
-        "hint": "Çin'in başkenti"
+        "content": "5 eşyanın rengini söyleyin. (Örn. Kalem, kırmızı)",
+        "color": "#e67e22",
+        "textColor": "#ffffff"
       }
     ]
+  },
+  "settings": {
+    "spinDuration": {
+      "min": 3000,
+      "max": 5000
+    },
+    "rotations": {
+      "min": 2,
+      "max": 4
     }
+  }
+}
    

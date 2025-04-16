@@ -3,7 +3,7 @@ import * as Entities from './entities';
 export default class Configs{
     static readonly spacesUrl = './assets';
     static gameConfig: Phaser.Types.Core.GameConfig = {
-        title: 'Anagram Game',
+        title: 'Wheel of Fortune',
         version: "1.0.0",
 
         type: Phaser.AUTO,
@@ -56,6 +56,12 @@ export default class Configs{
     static questionsTextColor: 'white' | 'black' = 'white';
     static answersTextColor: 'white' | 'black' = 'black';
     static uiComponentsColor: 'white' | 'black' = 'white';
+    
+    // New properties
+    static buttonScale: number = 0.35;
+    static wheelTextSize: string = '12px';
+    static wheelTextAlign: string = 'radial';
+    static resultTextSize: string = '24px';
 
     static webScale: number = Math.min(innerWidth / 1920, innerHeight / 1080);
     static mobileScale: number = Math.min((innerWidth / 1200), innerHeight / 800) ;

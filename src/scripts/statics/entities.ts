@@ -1,5 +1,5 @@
 export interface GameData {
-    list: (QuestionConfig | AnagramConfig)[]
+    list: (QuestionConfig | WheelOfFortuneConfig)[]
 }
 
 // Base interface for all game item configurations
@@ -16,14 +16,20 @@ export interface QuestionConfig {
     layout: string;
 }
 
-// Anagram specific config
-export interface AnagramConfig {
+// Wheel of Fortune specific config
+export interface WheelOfFortuneConfig {
     id?: string;
     type?: string;
-    scrambledWord: string;
-    correctWord: string;
-    hint?: string;
-    difficulty?: string;
+    content: string;
+    category?: string;
+}
+
+// Wheel of Fortune specific wedge item
+export interface WheelWedge {
+    content: string;
+    color: string;
+    textColor?: string;
+    value?: number;
 }
 
 export interface AnswerConfig{
@@ -39,6 +45,28 @@ export interface AnswerConfig{
     texture: string;
 }
 
+// This config is used to define the wheel of fortune
+export interface WheelConfig {
+    centerX: number;
+    centerY: number;
+    radius: number;
+    wedges: WheelWedge[];
+    wheelTextSize?: string;
+    wheelTextAlign?: string;
+    pointerPosition?: {
+        x: number;
+        y: number;
+    }
+}
+
+// This config defines how the wheel spins
+export interface SpinConfig {
+    minSpinDuration: number;
+    maxSpinDuration: number;
+    minRotations: number;
+    maxRotations: number;
+    easingFunction: string;
+}
 
 export interface SubmitButtonConfig {
     width: number;

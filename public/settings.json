@@ -2,6 +2,13 @@
     "settings": {
         "font": "Arial",
         "timeLimit": 2340,
-        "pointsPerCorrectAnswer": 10
+        "pointsPerCorrectAnswer": 10,
+        "UIComponentsColor": "white",
+        "answersTextColor": "white",
+        "questionsTextColor": "white",
+        "buttonScale": 0.35,
+        "wheelTextSize": "18px",
+        "wheelTextAlign": "horizontal",
+        "resultTextSize": "24px"
     }
 }

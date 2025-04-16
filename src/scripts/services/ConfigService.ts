@@ -4,7 +4,7 @@ export class ConfigService {
     private settingsUrl: string;
 
     private constructor() {
-        // Yerel dosyaları kullan
+        // Use local files
         this.gameDataUrl = 'questions.json';
         this.settingsUrl = 'settings.json';
     }
@@ -22,45 +22,60 @@ export class ConfigService {
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             return await response.json();
         } catch (error) {
-            console.error('Settings yüklenirken hata:', error);
-            // Varsayılan ayarlar
+            console.error('Settings loading error:', error);
+            // Default settings
             return {
                 settings: {
                     font: 'Arial',
-                    timeLimit: 120,
-                    pointsPerCorrectAnswer: 10
+                    timeLimit: 0, // No time limit for wheel of fortune
+                    pointsPerCorrectAnswer: 0, // No points for wheel of fortune
+                    buttonScale: 0.35,
+                    wheelTextSize: '12px',
+                    wheelTextAlign: 'radial',
+                    resultTextSize: '24px'
                 }
             };
         }
     }
 
-    public async loadQuestions(): Promise<any> {
+    public async loadWheelData(): Promise<any> {
         try {
             const response = await fetch(this.gameDataUrl);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            const data = await response.json();
-            // questions.json formatını anagram-data.json formatına dönüştür
-            return {
-                list: data.anagrams.map((item: any) => ({
-                    correctWord: item.word,
-                    hint: item.hint
-                }))
-            };
+            return await response.json();
         } catch (error) {
-            console.error('Oyun verileri yüklenirken hata:', error);
-            // Varsayılan anagramlar
+            console.error('Wheel data loading error:', error);
+            // Default wheel data
             return {
-                list: [
-                    {
-                        correctWord: "APPLE",
-                        hint: "A fruit that keeps the doctor away"
+                wheel: {
+                    wedges: [
+                        {
+                            content: "Spin again!",
+                            color: "#1e88e5",
+                            textColor: "#ffffff"
+                        },
+                        {
+                            content: "Tell us about yourself",
+                            color: "#d32f2f",
+                            textColor: "#ffffff"
+                        }
+                    ]
+                },
+                settings: {
+                    spinDuration: {
+                        min: 3000,
+                        max: 5000
                     },
-                    {
-                        correctWord: "BANANA",
-                        hint: "Yellow curved fruit"
+                    rotations: {
+                        min: 2,
+                        max: 4
                     }
-                ]
+                }
             };
         }
+    }
+    
+    public async loadQuestions(): Promise<any> {
+        return this.loadWheelData();
     }
 }

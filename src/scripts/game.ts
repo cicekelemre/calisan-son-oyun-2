@@ -20,26 +20,26 @@ export default class Game {
 
     private async initialize() {
         try {
-            // first load settings then load questions
-            const [settings, gameData] = await Promise.all([
+            // first load settings then load wheel data
+            const [settings, wheelData] = await Promise.all([
                 this.configService.loadSettings(),
-                this.configService.loadQuestions() // Use loadQuestions instead of loadGameData
+                this.configService.loadWheelData()
             ]);
 
             // start game
-            this.startGame(settings, gameData);
+            this.startGame(settings, wheelData);
         } catch (error) {
-            console.error('Oyun başlatılırken hata:', error);
+            console.error('Game initialization error:', error);
         }
     }
 
-    private startGame(settings: any, gameData: any) {
+    private startGame(settings: any, wheelData: any) {
         this._config = Configs.gameConfig;
 
         this._setConfigFromJSON(settings);
         this._preloadScene = new PreloadScene();
         this._startScene = new StartScene();
-        this._mainScene = new MainScene(gameData);
+        this._mainScene = new MainScene(wheelData);
 
         this._config.scene = [this._preloadScene, this._startScene, this._mainScene];
         this._gameObject = new Phaser.Game(this._config);
@@ -58,7 +58,11 @@ export default class Game {
             shuffleQuestions: true,
             UIComponentsColor: 'white',
             answersTextColor: 'white',
-            questionsTextColor: 'white'
+            questionsTextColor: 'white',
+            buttonScale: 0.35,
+            wheelTextSize: '12px',
+            wheelTextAlign: 'radial',
+            resultTextSize: '24px'
         };
 
         console.log("Settings:", settings);
@@ -69,6 +73,16 @@ export default class Game {
         Configs.timer.initialTime = settingsData.timeLimit || defaults.timeLimit;
         Configs.timer.isCountDown = true;  // Her zaman geri sayım olarak ayarla
         Configs.shuffleQuestions = settingsData.shuffleQuestions ?? defaults.shuffleQuestions;
+        
+        // Button scale
+        Configs.buttonScale = settingsData.buttonScale || defaults.buttonScale;
+        
+        // Wheel text settings
+        Configs.wheelTextSize = settingsData.wheelTextSize || defaults.wheelTextSize;
+        Configs.wheelTextAlign = settingsData.wheelTextAlign || defaults.wheelTextAlign;
+        
+        // Result text settings
+        Configs.resultTextSize = settingsData.resultTextSize || defaults.resultTextSize;
 
         // UI color settings
         const uiColor = settingsData.UIComponentsColor || defaults.UIComponentsColor;
